@@ -94,7 +94,7 @@ describe('WeatherForecastService', () => {
         },
       };
 
-      mockWeatherClient.getForecast.mockResolvedValue(mockForecastData);
+      mockWeatherClient.getForecast.mockResolvedValue(mockForecastData as any);
 
       const result = await service.getWeatherForecastForOneLocation('38.4664,-82.6441');
 
