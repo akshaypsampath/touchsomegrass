@@ -50,8 +50,6 @@ export class WeatherForecastClient {
           }
         })
       );
-      console.log('response.data')
-      console.log(response.data.properties.periods)
       return response.data;
     } catch (error) {
       throw new Error(`Failed to get hourly forecast: ${error.message}`);

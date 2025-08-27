@@ -8,7 +8,7 @@ import { WeatherForecastResponseDto } from './dto/weather-forecast.dto';
 export class WeatherForecastController {
   constructor(private readonly weatherService: WeatherForecastService) {}
 
-  @Get('forecastOneLocation')
+  @Get('forecast-one-location')
   @ApiOperation({ summary: 'Get weather forecast for outdoor activities using coordinates' })
   @ApiQuery({ name: 'location', required: false, description: 'Coordinates in format "lat,lon"', example: '38.4664,-82.6441' })
   @ApiResponse({ 
@@ -24,7 +24,7 @@ export class WeatherForecastController {
     return this.weatherService.getWeatherForecastForOneLocation(location);
   }
 
-  @Get('forecastManyLocations')
+  @Get('forecast-many-locations')
   @ApiOperation({ summary: 'Get weather forecast for multiple locations using coordinates' })
   @ApiQuery({ 
     name: 'location', 

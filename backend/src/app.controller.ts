@@ -6,9 +6,4 @@ import { WeatherForecastRequestDto, WeatherForecastResponseDto } from './weather
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
-
-  @Get()
-  getRootMessage(): string {
-    return this.appService.getHello();
-  }
 }
